@@ -1,7 +1,7 @@
 import urllib.request as req
 from bs4 import BeautifulSoup
 
-def readArticleIntro(arName, lang="en"):
+def readIntro(arName, lang="en"):
     url = 'https://' + lang + '.wikipedia.org/wiki/' + arName
     page = req.urlopen(url)
     soup = BeautifulSoup(page.read(), "html.parser")
